@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h1>Saisir un genre : </h1>
+<h1> : </h1>
 <ul>
     <form action="?c=movie&t=listeGenre" method="post"> 
         {% for genre in genres %}
@@ -12,4 +12,17 @@
         {% endfor %}
     </form>
 </ul>
+
+<form action="?c=movie&t=listeGenre" method="post"> 
+        {% for emotion in emotions %}
+            
+            {% for idGenre in emotion['genres'] %}
+                <div class="emotion">
+                <p> {{ emotion['name'] }}</p>
+                <button name="emotionGenre" value={{ idGenre['id'] }}> {{ emotion['emoji']  | raw }}</button><br>
+                </div>
+            {% endfor %}
+            
+        {% endfor %}
+</form>
 {% endblock %}

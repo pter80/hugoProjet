@@ -35,8 +35,9 @@ class MovieController extends Controller
   }
   public function listeGenre ($params)
   {
-    $genreId = $_POST["genre"];
-    //var_dump($genreId);
+    $genreId = $_POST["emotionGenre"];
+    var_dump($genreId);
+    die;
     
     $em=$params["em"];
     $genreRepository = $em->getRepository('Entity\Genre');

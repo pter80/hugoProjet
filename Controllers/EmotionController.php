@@ -16,9 +16,8 @@ class EmotionController extends Controller
     $emotions=$query->getArrayResult();
     
     //var_dump($emotions);
-    $emotionsArray = [];
     foreach($emotions as $value){
-      echo ("-----------------------------<br/>");
+      //echo ("-----------------------------<br/>");
       //var_dump($value['name'],$value["emoji"]);
       $name = $value['name'];
       $emoji = $value["emoji"];
@@ -28,10 +27,9 @@ class EmotionController extends Controller
         $idGenre = $i["id"]; 
       }
       
-      array_push($emotionsArray, $name=>$emoji);
     }
     
-    var_dump($emotionsArray);
+   echo $this->twig->render('genre.twig',['emotions' => $emotions]); 
     
     
    
