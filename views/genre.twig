@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>Saisir un genre : </h1>
+<ul>
+    <form action="?c=movie&t=listeGenre" method="post"> 
+        {% for genre in genres %}
+        
+            <button name="genre" value={{ genre.id }}> {{ genre.name }}</button><br>
+
+        {% endfor %}
+    </form>
+</ul>
+{% endblock %}

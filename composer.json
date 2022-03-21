@@ -1,0 +1,25 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "Controllers/",
+            "type\\": "object",
+            "description\\": "This is a hash of namespaces (keys) and the PSR-4 directories they can map to (values, can be arrays of paths) by the autoloader.",
+            "Entity\\": "src/Entity"
+        }
+    },
+
+    "require": {
+        "twig/twig": "^3.0",
+        "datatables/datatables": "^1.10",
+        "symfony/cache": "*",
+        "symfony/yaml": "*",
+        "doctrine/orm": "*",
+        "doctrine/dbal": "^3.1.1",
+        "doctrine/annotations": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    }
+}

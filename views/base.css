@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+body .page{
+    margin: 20px 80px;
+}
+
+/* -- BARRE DE NAVIGATION -- */
+nav{
+    display: flex; /* Aligner les éléments*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #141414;  /* Pour bien distinguer la barre de nav. de la page*/
+    padding: 10px  0px;
+
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px; /* pour être aligner au boutton */
+}
+
+nav .onglets a{
+    margin-right: 20px; /* écart entre les <a> */
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; 
+}
+
+nav .buttons button{
+    padding: 13px 20px;
+    border:none;
+    /*background-color: #a60000;*/
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+nav .buttons .home{
+    background-color: inherit;
+    margin-right: 10px;
+    color: #8f8f8f;
+
+}
+nav .buttons .contact{
+    background-color: inherit;
+    margin-right: 10px;
+    color: #8f8f8f;
+
+}
+nav .buttons .start{
+    background-color:#a60000;
+    margin-right: 10px;
+    color: #fff;
+
+}
+
+/* -- Fin de la barre de navigation  -- */

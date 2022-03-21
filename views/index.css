@@ -1,0 +1,26 @@
+/* -- Header -- */
+
+header{
+    margin-top: 40px;
+    text-align: center;
+}
+header h1{
+   font-size: 60px;
+   padding: 5px;
+}
+
+#logo{
+    font-size: 80px;
+}
+header .start{
+    background-color:#a60000;
+    padding: 13px 20px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    border:none;
+    outline: none;
+
+}
+
+/* -- Fin Header -- */

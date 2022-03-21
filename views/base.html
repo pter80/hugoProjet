@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        {% block stylesheet  %}
+            <link type="text/css"  href="views/base.css" rel="stylesheet" >
+            <script type="text/javascript" src="./javascript/jquery.js"></script>
+            <script type="text/javascript" src="./javascript/moment.js"></script>
+            <script type="text/javascript" src="./javascript/vue.js"></script>
+        {% endblock %}
+        
+        
+        <title>{% block title %} MovieP🍿P Home {% endblock %}</title>
+    </head> 
+    <body>
+    
+       <section class="page"> 
+        <!-- Barre de navigation-->
+        <nav>
+            <div class="onglets">
+                <a href="http://195.154.118.169/hugo/html/projet/">MovieP🍿P</a>
+            </div>
+            <div class="buttons">
+                <button class="contact" onclick="window.location.href='http://195.154.118.169/hugo/html/projet/';">HOME</button>
+                <button class="home">CONTACT</button>
+                <button class="start" onclick="window.location.href='?c=movie&t=movieGenre';"> START</button>
+            </div>
+        </nav>
+        {% block body %}
+
+        {% endblock %}
+       </section> 
+       
+       {% block script %}
+
+        {% endblock %}
+    
+
+</body>
+
+
+</html> 

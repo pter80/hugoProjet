@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1> Liste de film  :  </h1>
+    
+    <form action="?c=movie&t=movieDetail" method="post"> 
+    {% for movie in movies %}
+    
+        <button name="movieId" value={{ movie.id }}> <img src="https://image.tmdb.org/t/p/w185/{{ movie.posterPath }}"  alt="{{ movie.title }}"/> </button>
+        
+    {% endfor %}
+    
+    </form>
+    
+
+
+{% endblock %}

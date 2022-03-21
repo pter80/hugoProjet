@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block script %}
+<script type="application/javascript">
+    //verifier si jquery fonctionne
+    $(document).ready(function(value){
+        console.log("Page chargée ");
+        console.log({{ genres|raw }});
+    });
+    var app = new Vue({
+        el: '#app',
+        delimiters: ["<%", "%>"],
+        data : {
+            message : "mon message",
+            genres : {{genres|raw}}
+        },
+        methods : {
+            del: function(){
+                app.genres.splice(5,1);
+            },
+            read: function(){
+                console.log("read");
+                fetch("http://195.154.118.169/hugo/html/projet/?c=movie&t=readAll")
+                    .then(function(res){
+                       //console.log(("Réponse",res.json()));
+                       res.json().then(function(data){
+                           app.genres=data.genres;
+                           console.log("Genres",data.genres);
+                       });
+                    })
+                   
+            }
+        }
+        
+        
+        
+    })
+    
+</script>
+{% endblock %}
+
+
+{% block body %}
+
+<div id="app">
+    <h1> <% message %></h1>
+    <h2></h2>
+    
+    <ul>
+        <li v-for="genre in genres"><% genre.name %></li>
+    </ul>
+    <button v-on:click= "del">supprime</button>
+    <button v-on:click= "read">reset</button>
+    
+    
+</div>
+{% endblock %}
