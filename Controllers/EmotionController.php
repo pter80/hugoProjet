@@ -14,22 +14,28 @@ class EmotionController extends Controller
     $dql = "SELECT e,g FROM Entity\Emotion e LEFT JOIN e.genres g";
     $query = $em->createQuery($dql);
     $emotions=$query->getArrayResult();
-    
+    $result = [];
     //var_dump($emotions);
     foreach($emotions as $value){
-      //echo ("-----------------------------<br/>");
-      //var_dump($value['name'],$value["emoji"]);
       $name = $value['name'];
       $emoji = $value["emoji"];
-
+      $idGenres=[];
       foreach($value["genres"] as $i){
         //var_dump($i["id"]);
-        $idGenre = $i["id"]; 
+        $idGenres[] = $i["id"]; 
       }
+      $result[] = [
+        'nom'=>$name,
+        'emoji'=>$emoji,
+        'idGenres'=>$idGenres
+      ];
+     
       
     }
     
-   echo $this->twig->render('genre.twig',['emotions' => $emotions]); 
+    //var_dump($result);die;
+    
+   echo $this->twig->render('genre.twig',['result' => json_encode($result)]); 
     
     
    

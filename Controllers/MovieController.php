@@ -33,10 +33,13 @@ class MovieController extends Controller
     echo json_encode(['genres'=>$genres]); 
     // json_decode = Récupère une chaîne encodée JSON et la convertit en une variable PHP.
   }
-  public function listeGenre ($params)
+  public function getMovieGenres ($params)
   {
-    $genreId = $_POST["emotionGenre"];
-    var_dump($genreId);
+    //$genreId = $_POST[""];
+    //var_dump("Params:",json_decode($params['get']['ids']));
+    //var_dump($genreId);
+    var_dump("Post:",json_decode($params['post']['json']));
+    //Faire la boucle etc.....
     die;
     
     $em=$params["em"];
