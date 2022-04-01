@@ -100,7 +100,6 @@ foreach ($jsondecode->results as $key => $value) {
     $qb=$em->createQueryBuilder();
     $qb->select('p')
       ->from('Entity\PopularityHistory', 'p')
-      //->leftJoin('Entity\Movie','m')
       ->where('p.movie =:movie')
       ->andWhere('p.date=:now')
       ->setParameters(['movie'=>$movie,'now'=>$now->format('Y-m-d')])

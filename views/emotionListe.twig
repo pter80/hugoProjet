@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block stylesheet  %}
+        {{ parent() }}
+        <link type="text/css"  href="views/emotionListe.css" rel="stylesheet" >
+{% endblock %}
+
+{% block body %}
+
+
+<div class="body">
+    <h1> Vous avez envie d’être  : </h1>
+    <form action="?c=movie&t=getMovieGenres" method="post"> 
+       <div class="button">
+           {% for emotion in emotions %}
+                
+                <button class="buttonEmotion" name="emotion" value={{ emotion.id }}> <div id="detailbutton"> <p id="emoji">{{ emotion.emoji |raw }} </p><p>{{ emotion.name }}</p></div></button>
+                
+            {% endfor %}
+        </div>
+</div>
+
+{% endblock %}
+
+
+

@@ -49,7 +49,13 @@ class Emotion
         $this->genres = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
-    
+    public function idsGenres() {
+        $idsGenre=[];
+        foreach ($this->getGenres() as $genre){
+            $idsGenre[]=$genre->getId();
+        }   
+        return $idsGenre;
+    }
     
     /**
      * Get id.

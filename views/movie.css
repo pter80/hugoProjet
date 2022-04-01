@@ -1,26 +1,53 @@
+/* Btn retour */
+
+.btnRetour{
+  border: none;
+  cursor: pointer;
+  margin: 50px 0px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+  background: #141414;
+  box-shadow:  10px 10px 17px #0b0b0b,
+              -10px -10px 17px #1d1d1d;
+}
+
+.btnRetour:hover{
+  box-shadow: inset 10px 10px 17px #0b0b0b,
+              inset -10px -10px 17px #1d1d1d;
+}
+
+.btnRetour span{
+    font-size: 25px;
+}
+/*  Fin Btn retour */
+
 
 /* -- Header -- */
 header{
     margin-top: 40px;
     text-align:left;
-    
     display: flex;
     flex-wrap: wrap;
+    
 }
 header h1{
    font-size: 60px;
-   padding-top: 5px;
+   margin: 30px 0px;
+   color: #fff;
 }
 
 header .contents{
     padding-left: 15px;
     font-size: 20px;
     color: #8f8f8f;
+    
 }
 
-header h1{
-    color: #fff;
-}
 
 header button{
     cursor: pointer;
@@ -32,8 +59,14 @@ header button{
     font-size: 17px;
 }
 
+.synopsis{
+    margin : 40px 0px;
+    width : 100%;
+}
+
 header P{
     font-size: 17px;
+    
 }
 header span{
     color: #a60000;
@@ -41,21 +74,51 @@ header span{
     
 }
 
+h2{
+    padding-bottom: 20px;
+}
+
+#openBtnPop{
+    color: #5b5b5b;
+    transition: transform 0.25s;
+    
+}
+#openBtnPop:hover{
+    color: #a60000;
+    transform: scale(1.05);
+    
+}
+
+
 /* -- POPUP TRAILER -- */
 header dialog {
     background-color: #111;
     width: 70%;
     height: 70%;
     padding: 0px;
+    
 }
 
 header dialog #closeBtn {
     border:none;
     cursor: pointer;
     background-color:#0D0D0D;
+    font-size: 20px;
+    
     
 }
 /* -- FIN POPUP TRAILER -- */
+
+/* -- POPUP POPULARITY -- */
+#btPopularity{
+    width: 50%;
+    height: 60%;
+}
+
+
+/* -- FIN POPUP POPULARITY -- */
+
+
 
 /* -- Acteurs principaux  -- */
 
@@ -63,6 +126,8 @@ header dialog #closeBtn {
      overflow: hidden; /* Pour ne pas que la div ne dépasse de la page*/
      background-color:#a60000;
      filter: drop-shadow(0 0 10px #a60000);
+
+     
     
 }
 
@@ -104,3 +169,5 @@ header dialog #closeBtn {
 
 
 /* -- Fin Header -- */
+
+

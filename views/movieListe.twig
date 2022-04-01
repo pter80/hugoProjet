@@ -1,17 +1,75 @@
 {% extends "base.html" %}
 
+{% block stylesheet  %}
+        {{ parent() }}
+        <link type="text/css"  href="views/movieListe.css" rel="stylesheet" >
+{% endblock %}
+
+
 {% block body %}
-    <h1> Liste de film  :  </h1>
-    
-    <form action="?c=movie&t=movieDetail" method="post"> 
-    {% for movie in movies %}
-    
-        <button name="movieId" value={{ movie.id }}> <img src="https://image.tmdb.org/t/p/w185/{{ movie.posterPath }}"  alt="{{ movie.title }}"/> </button>
+    <div class="body">
         
-    {% endfor %}
+        <!-- Bouton retour à la liste d'émotion -->
+        <div class="retour">
+            <form action="?c=emotion&t=liste" method="post">
+                <button class="btnRetour"><span>⬅️</span></button>
+            </form>
+        </div>
+        <!-- Fin Bouton retour à la liste d'émotion -->
     
-    </form>
-    
-
-
+        <h1> Films les plus populaires :  </h1>
+        <section class="listeMovie">
+            {% set i = 0 %}
+            <form action="?c=movie&t=movieDetail" method="post"> 
+                <input type="hidden" name="emotionId" value="{{ emotionId }}"> <!-- Pour le Bt retour -->
+                <div class="list">
+                    {% for movie in movies %}
+                        {% set i = i + 1 %}
+                         <!-- affiche les 50 premiers  -->
+                         {% if i <= 50  %}
+                            <button type="submit" name="movieId" value="{{ movie.id }}"><img src="https://image.tmdb.org/t/p/w185/{{ movie.posterPath }}"  alt="{{ movie.title }}" /></button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="body">
+        <h1> C'est Français 🥖 ! </h1>
+        
+        <section class="listeMovie">
+            {% set i = 0 %}
+            <form action="?c=movie&t=movieDetail" method="post">
+                <input type="hidden" name="emotionId" value="{{ emotionId }}"> <!-- Pour le Bt retour -->
+                <div class="list">
+                    {% for movie in moviesFr %}
+                        {% set i = i + 1 %}
+                         <!-- affiche les 50 premiers  -->
+                         {% if i <= 50  %}
+                            <button type="submit" name="movieId" value="{{ movie.id }}"><img src="https://image.tmdb.org/t/p/w185/{{ movie.posterPath }}"  alt="{{ movie.title }}" /></button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="body">
+        <h1> Les plus récents : </h1>
+        
+        <section class="listeMovie">
+            {% set i = 0 %}
+            <form action="?c=movie&t=movieDetail" method="post">
+                <input type="hidden" name="emotionId" value="{{ emotionId }}"> <!-- Pour le Bt retour -->
+                <div class="list">
+                    {% for movie in moviesRecent %}
+                        {% set i = i + 1 %}
+                         <!-- affiche les 50 premiers  -->
+                         {% if i <= 50  %}
+                            <button type="submit" name="movieId" value="{{ movie.id }}"><img src="https://image.tmdb.org/t/p/w185/{{ movie.posterPath }}"  alt="{{ movie.title }}" /></button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </form>
+        </section>
+    </div>
 {% endblock %}

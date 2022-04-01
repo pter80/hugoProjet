@@ -1,0 +1,41 @@
+.body {
+    margin-top: 120px;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+}
+
+
+.button{
+    padding : 20px;
+}
+
+
+
+.buttonEmotion {
+    margin-right : 30px;
+    padding : 10px;
+    border:none;
+    cursor: pointer;
+    background-color: #141414;
+    color:white;
+    font-size : 20px;
+    
+}
+
+.buttonEmotion:hover {
+  color: #a60000;
+}
+
+
+.detailbutton{
+    display : flex;
+    
+}
+
+#emoji{
+    margin:2px;
+    font-size : 60px;
+}

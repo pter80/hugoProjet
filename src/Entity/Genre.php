@@ -148,4 +148,28 @@ class Genre
     {
         return $this->movies;
     }
+
+    /**
+     * Set emotion.
+     *
+     * @param \Entity\Emotion|null $emotion
+     *
+     * @return Genre
+     */
+    public function setEmotion(\Entity\Emotion $emotion = null)
+    {
+        $this->emotion = $emotion;
+
+        return $this;
+    }
+
+    /**
+     * Get emotion.
+     *
+     * @return \Entity\Emotion|null
+     */
+    public function getEmotion()
+    {
+        return $this->emotion;
+    }
 }

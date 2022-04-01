@@ -36,15 +36,11 @@ class Genre
      */
     private $name;
     
-    /*
-     * @ORM\OneToOne(targetEntity="Emotion")
-     */
-     private $emotion;
-     /**
+    /**
      *  Coté propriétaire
-     * @ORM\ManyToOne(targetEntity="Emotion")
+     * @ORM\ManyToOne(targetEntity="Emotion", inversedBy="genres")
      */
-    private $emotion_id;
+    private $emotion;
 
      /**
      * Many Users have Many Groups.

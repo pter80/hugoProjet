@@ -1,0 +1,67 @@
+.body{
+    padding-top: 50px;
+}
+
+.listeMovie .list{
+    display:flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+} 
+
+.listeMovie button{
+    padding-left: 20px;
+    transition: transform 0.25s;
+    border:none;
+    cursor: pointer;
+    background-color: #141414;
+    
+} 
+
+.listeMovie button:hover{
+    transform: scale(1.05);
+    
+} 
+
+
+/* PARAM SCROLLBAR */
+  ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+
+  }
+  ::-webkit-scrollbar-track-piece  {
+  background-color: #141414;
+  border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb{
+    width: 50px;
+    background-color: #444444;
+    border-radius: 20px;
+  }
+
+
+/* Btn retour */
+
+.btnRetour{
+  border: none;
+  cursor: pointer;
+  margin: 50px 0px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+  background: #141414;
+  box-shadow:  10px 10px 17px #0b0b0b,
+              -10px -10px 17px #1d1d1d;
+}
+
+.btnRetour:hover{
+  box-shadow: inset 10px 10px 17px #0b0b0b,
+              inset -10px -10px 17px #1d1d1d;
+}
+.btnRetour span{
+    font-size: 25px;
+}
