@@ -1,68 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body{
-    font-family: 'Lato', sans-serif;
-    background-color: #141414;
-    padding: 0;
-    margin: 0;
-    color: #fff;
+  margin:0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  background-color:#f1f1f1;
+  
 }
+
 body .page{
     margin: 20px 80px;
     
+    
 }
 
-/* -- BARRE DE NAVIGATION -- */
+/* Barre de navigation */
+
 nav{
-    display: flex; /* Aligner les éléments*/
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background-color: #141414;  /* Pour bien distinguer la barre de nav. de la page*/
-    padding: 10px  0px;
-
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color:#475B5A;
+  position: sticky;
+  top: 0;
+  color : #f1f1f1;
 }
-
+nav h1{
+  font-size: 20px;
+}
 nav .onglets{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5px; /* pour être aligner au boutton */
+  display: flex;
+  flex-wrap:wrap;
 }
-
 nav .onglets a{
-    margin-right: 20px; /* écart entre les <a> */
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px; 
+  font-size: 17px;
+  margin-right: 10px;
+  cursor:pointer;
+}
+/* Fin de la barre de navigation */
+
+
+.page{
+    height : 450px;
 }
 
-nav .buttons button{
-    padding: 13px 20px;
-    border:none;
-    /*background-color: #a60000;*/
-    font-size: 15px;
-    cursor: pointer;
-    outline: none;
+
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: #000;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
 }
-
-nav .buttons .home{
-    background-color: inherit;
-    margin-right: 10px;
-    color: #8f8f8f;
-
+footer .social-media{
+  display: flex;
 }
-nav .buttons .contact{
-    background-color: inherit;
-    margin-right: 10px;
-    color: #8f8f8f;
-
+footer .social-media p{
+  margin-right: 15px;
+  /*padding: 5px;*/
+  text-align:center;
+  width: 20px;
+  cursor:pointer;
+  font-size:20px;
 }
-nav .buttons .start{
-    background-color:#a60000;
-    margin-right: 10px;
-    color: #fff;
-
-}
-
-/* -- Fin de la barre de navigation  -- */
+/* Fin du pied de page */

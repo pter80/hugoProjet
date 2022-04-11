@@ -1,0 +1,92 @@
+html, body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+      
+form {
+    width : 90%;
+}
+
+a{
+    text-decoration: none;
+    color: #7D8E95;
+}
+.iconBack{
+    font-size:35px;
+    
+    
+}
+
+select{
+      
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 5px 8px;
+    background-color:white;
+    border: 1px solid #ccc;
+    color: grey;
+    border-radius: 10px;
+}
+select option{
+    color: black;
+}
+
+
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+span{
+    font-weight: bold;
+    float: left;
+}
+
+.icon {
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    color: #31525B;
+}
+button {
+    background-color: #31525B;  /* #7D8E95 */
+    color: white;
+    padding: 14px 0px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    text-align:center;
+    border-radius: 10px;
+    
+}
+h1 {
+    text-align:center;
+    font-size:18;
+}
+button:hover {
+    opacity: 0.8;
+}
+.formcontainer {
+    text-align: center;
+    margin: 24px 50px 12px;
+}
+.container {
+    padding: 16px 0;
+    text-align:left;
+}
+
+.alert{
+    text-align:center;
+    color: red;
+    font-weight: bold;
+}

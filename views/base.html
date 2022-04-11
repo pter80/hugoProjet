@@ -1,3 +1,7 @@
+{% block php %}
+
+{% endblock %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,32 +14,40 @@
         {% endblock %}
         
         
-        <title>{% block title %} MovieP🍿P Home {% endblock %}</title>
+        <title>{% block title %} Home {% endblock %}</title>
     </head> 
     <body>
-    
-       <section class="page"> 
-        <!-- Barre de navigation-->
+        <!-- Barre de navigation -->
         <nav>
-            <div class="onglets">
-                <a href="http://195.154.118.169/hugo/html/projet/">MovieP🍿P</a>
-            </div>
-            <div class="buttons">
-                <button class="contact" onclick="window.location.href='http://195.154.118.169/hugo/html/projet/';">HOME</button>
-                <button class="home">CONTACT</button>
-                <button class="start" onclick="window.location.href='?c=emotion&t=liste';"> START</button>
-                  
-            </div>
-        </nav>
+        <h1>NomSite</h1>
+        <div class="onglets">
+          <a class="link" href="?c=index&t=index">Home</a>
+        </div>
+      </nav>
+  <!-- Fin de la barre de navigation -->
+       <section class="page"> 
+          
+          
         {% block body %}
+        
 
         {% endblock %}
        </section> 
-       
-        {% block script %}
-
-        {% endblock %}
-    
+    <!-- Pied de page -->
+        <footer>
+            <p>&copy; VILACA Hugo</p>
+            <div class="social-media">
+              <p><i class="fa-brands fa-twitter"></i></p>
+              <p><i class="fa-brands fa-instagram"></i></p>
+              <p><i class="fa-brands fa-facebook"></i></p>
+              <p><i class="fa-brands fa-reddit"></i></p>
+            </div>
+      </footer>
+  <!-- Fin du pied de page -->
+  
+  {% block script %}
+            <script src="https://kit.fontawesome.com/2a2e68ce16.js" crossorigin="anonymous"></script>
+  {% endblock %}
 
 </body>
 

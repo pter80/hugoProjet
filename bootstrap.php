@@ -15,7 +15,7 @@ $dbParams = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'hugo',
     'password' => 'bts2020',
-    'dbname'   => 'hugo',
+    'dbname'   => 'hugo2',
 );
 $useSimpleAnnotationReader = false;
 $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);

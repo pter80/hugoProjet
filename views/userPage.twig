@@ -1,0 +1,25 @@
+{% block php %}
+    <?php
+        session_start();
+    ?>
+{% endblock %}
+{% extends "base.html" %}
+
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link type="text/css"  href="views/userPage.css" rel="stylesheet" >
+    
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+
+{% block body %}
+
+<h1>Bonjour {{ username}} </h1>
+<a href="?c=user&t=closeSession"> Deconnexion</a>
+
+
+{% endblock %}

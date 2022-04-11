@@ -1,16 +1,29 @@
 {% extends "base.html" %}
 
-{% block stylesheet  %}
-        {{ parent() }}
-        <link type="text/css"  href="views/index.css" rel="stylesheet" >
-{% endblock %}
-        
-{% block body %}
-        <header>
-                <h1 id="logo">🍿</h1>
-                <h1>Découvrez, Regarder, Vivez</h1>
-                <button class="start" onclick="window.location.href='?c=emotion&t=liste';"> START</button>
-        </header>
+{% block stylesheet %}
+    {{ parent() }}
+    <link type="text/css"  href="views/index.css" rel="stylesheet" >
 {% endblock %}
 
-   
+
+{% block body %}
+    {% if connectUser  == true %}   <!-- Si le compte existe déja  -->
+        
+        <h1>Tableau de bord</h1>
+        <a href="?c=user&t=openSession"> Votre espace</a>
+        <a href="?c=user&t=closeSession"> Deconnexion</a>
+        
+        
+        {% else %}
+        <div class="user">
+        <a href="?c=user&t=create"> Account</a>
+        <a href="?c=user&t=login"> Login</a>
+        </div>
+    
+     {% endif %}
+{% endblock %}
+
+
+
+
+
